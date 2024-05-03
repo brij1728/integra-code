@@ -24,22 +24,52 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={formData.name}
-        onChange={handleChange}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-      <button type="submit">Submit</button>
+    <form
+      onSubmit={handleSubmit}
+      className="mx-auto max-w-md rounded-md bg-white p-6 shadow-md"
+    >
+      <div className="mb-6">
+        <label
+          htmlFor="name"
+          className="mb-2 block font-semibold text-gray-700"
+        >
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="focus:ring-primary w-full rounded-md border border-rose-300 px-4 py-2 focus:border-rose-500 focus:outline-none focus:ring focus:ring-opacity-50"
+        />
+      </div>
+      <div className="mb-6">
+        <label
+          htmlFor="email"
+          className="mb-2 block font-semibold text-gray-700"
+        >
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="focus:ring-primary w-full rounded-md border border-rose-300 px-4 py-2 focus:border-rose-500 focus:outline-none focus:ring focus:ring-opacity-50"
+        />
+      </div>
+      <button
+        type="submit"
+        className="bg-btn hover:bg-primary-dark focus:bg-primary-dark w-full rounded-md px-4 py-2 text-white focus:outline-none"
+      >
+        Submit
+      </button>
     </form>
   );
 };
