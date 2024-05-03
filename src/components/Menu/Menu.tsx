@@ -18,6 +18,10 @@ export const Menu: React.FC<MenuProps> = ({ onLinkClick }) => {
       href: '/form',
     },
     {
+      name: 'Home',
+      href: '/',
+    },
+    {
       name: 'Linked List',
       href: '/linkedList',
     },

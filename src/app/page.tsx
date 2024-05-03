@@ -1,6 +1,25 @@
+'use client';
 
-export default function Home() {
+import { DisplayData, Form } from '@/components';
+import React, { useState } from 'react';
+
+const HomePage: React.FC = () => {
+  const [submittedData, setSubmittedData] = useState<{
+    name: string;
+    email: string;
+  } | null>(null);
+
+  const handleSubmit = (formData: { name: string; email: string }) => {
+    setSubmittedData(formData);
+  };
+
   return (
-    <h1>Integra Code</h1>
+    <div className=" flex w-full flex-col items-center justify-center gap-4 p-4">
+      <h1 className="text-xl font-bold md:text-2xl">User Info Form</h1>
+      <Form onSubmit={handleSubmit} />
+      {submittedData && <DisplayData formData={submittedData} />}
+    </div>
   );
-}
+};
+
+export default HomePage;
