@@ -3,7 +3,7 @@ import React from 'react';
 
 const LinkedListPage = () => {
   return (
-    <>
+    <div className="mx-auto p-4">
       <h1>Linked List</h1>
       <p>
         Linked List is a linear data structure. It is a collection of nodes
@@ -13,7 +13,7 @@ const LinkedListPage = () => {
       </p>
 
       <LinkedListComponent />
-    </>
+    </div>
   );
 };
 

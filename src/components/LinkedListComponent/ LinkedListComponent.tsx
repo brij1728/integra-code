@@ -47,7 +47,7 @@ export const LinkedListComponent: React.FC = () => {
   };
 
   return (
-    <div key={key} className="p-4">
+    <div key={key} className="mt-4">
       <input
         type="text"
         value={input}
