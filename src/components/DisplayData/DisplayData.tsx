@@ -11,7 +11,7 @@ interface DisplayDataProps {
 
 export const DisplayData: React.FC<DisplayDataProps> = ({ formData }) => {
   return (
-    <div className="mx-auto flex w-full max-w-md flex-col rounded-md bg-white p-6 shadow-md">
+    <div className=" flex w-full max-w-md flex-col rounded-md bg-white p-6 shadow-md">
       <h2 className="mb-4 text-xl font-semibold md:text-2xl">Submitted Data</h2>
       <div className="mb-4 flex flex-col gap-1 sm:flex-row">
         <p className="text-sm font-semibold text-gray-700 sm:text-base">

@@ -14,7 +14,7 @@ const FormPage: React.FC = () => {
   };
 
   return (
-    <div className=" flex w-full flex-col items-center justify-center gap-4 p-4">
+    <div className=" flex w-full flex-col gap-4 p-4">
       <h1 className="text-xl font-bold md:text-2xl">User Info Form</h1>
       <Form onSubmit={handleSubmit} />
       {submittedData && <DisplayData formData={submittedData} />}
